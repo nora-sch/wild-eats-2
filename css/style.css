@@ -17,7 +17,7 @@ body {
 
 header {
   height: 70vh;
-  padding:30px;
+  padding: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,6 +27,8 @@ header {
   background-position-y: center;
   background-attachment: fixed;
   background-size: cover;
+  /* background-blend-mode: multiply; */
+  /* filter: grayscale(20%); */
 }
 
 #wild-eats-logo {
@@ -34,28 +36,24 @@ header {
   max-width: 30%;
 }
 
-#sign-in-btn{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    color:var(--light-color);
-    background-color: #b6c4718e;
-    padding:0px 0px 0px 10px;
-    border-radius: 20px;
-  
+#sign-in-btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-color);
+  background-color: #b6c4718e;
+  padding: 0px 0px 0px 10px;
+  border-radius: 20px;
 }
-i,.fa-circle-user{
-    color: var(--accent-color);
-    font-size: 32px;
-    margin-left: 5px;
+i,
+.fa-circle-user {
+  color: var(--accent-color);
+  font-size: 32px;
+  margin-left: 5px;
 }
-#mainImage {
-  width: 100%;
-  object-fit: none;
-  max-height: 50vh;
-}
+
 
 main {
   display: flex;
@@ -74,21 +72,43 @@ section {
   display: flex;
   flex-grow: 2;
   flex-direction: column;
-  padding: 40px;
+  padding-left: 40px;
+  padding-top: 30px;
   align-items: center;
   width: 100%;
-  height: 2000px;
 }
 
-.div-top-dix {
-  margin-bottom: 30px;
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 500px;
-  justify-content: space-between;
-  box-shadow: 4px 5px 15px black;
+.top10-wrapper{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-shadow: 0 0.3rem 0.3rem var(--light-color); 
+    height: 400px;
 }
+
+.top10-img{
+  background-image: url("https://media.discordapp.net/attachments/1098254523581075487/1098901457425670154/emy-XoByiBymX20-unsplash.jpg?width=702&height=468");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+  width: 45%;
+
+ }
+
+ .top10-img>h1{
+    color:var(--light-color);
+    padding:0;
+    margin:0;
+ }
+ 
+ .top10-right{
+    display: flex;
+    flex-direction: column;
+       padding: 0px 20px;
+       width: 55%;
+ }
+
 
 .div-wrap-img {
   display: flex;

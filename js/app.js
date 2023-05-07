@@ -20,6 +20,16 @@ window.addEventListener("DOMContentLoaded", () => {
   const restaurantTop10 = getTop10(restaurants); // restaurant Top 10
   const top10Length = getTop10(restaurants).length; // nb of restaurants
 
+  // CUT TEXT
+  let top10description = document.querySelector('.top10-description p');
+
+  let cardDescription = document.querySelector('.resto-card-description p');
+
+  const slicedTextTop10 = top10description.textContent.slice(0, top10description.textContent.indexOf(' ', 600));
+  top10description.innerHTML = `${slicedTextTop10} <span>[...]</span>`;
+  const slicedTextRestoCard = cardDescription.textContent.slice(0, cardDescription.textContent.indexOf(' ', 380));
+  cardDescription.innerHTML = `${slicedTextRestoCard} <span>[...]</span>`;
+  
   // FILTER FACTORY
 
   const resetFilters = () => {

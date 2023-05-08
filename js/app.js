@@ -9,10 +9,14 @@ import {
   getByDiet,
   searchByName,
 } from "./filters.js";
+import{
+  displayRestaurants
+} from "./main-dom.js"
 
 window.addEventListener("DOMContentLoaded", () => {
   let dataToDisplay = restaurants;
   console.log(dataToDisplay);
+  displayRestaurants(restaurants);
 
   const allFiltersToDisplay = getAllFiltersToDisplay(restaurants);
   console.log(allFiltersToDisplay);
@@ -110,6 +114,7 @@ window.addEventListener("DOMContentLoaded", () => {
     };
     dataToDisplay = filteredResult(filters, restaurants);
     console.log(dataToDisplay);
+    displayRestaurants(dataToDisplay);
   });
 
   // RESET
@@ -121,6 +126,7 @@ window.addEventListener("DOMContentLoaded", () => {
     dataToDisplay = restaurants;
     console.log(filters);
     console.log(dataToDisplay);
+    displayRestaurants(dataToDisplay);
   });
 
   console.log(filters);

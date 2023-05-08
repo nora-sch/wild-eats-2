@@ -210,7 +210,7 @@ section {
 }
 .resto-card-info {
   /* flex-grow: 9; */
-  padding: 0px;
+  padding: 0px 0px 0px 20px;
   width: 760px;
   display: flex;
   flex-direction: column;

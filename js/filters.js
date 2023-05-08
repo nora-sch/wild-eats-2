@@ -130,10 +130,8 @@ const getAllFiltersToDisplay = (data) => {
 
 // search by name
 const searchByName = (data, sentence) => {
-  let res = [];
-  let index = data.findIndex((resto) => resto.nom === sentence);
-  if (index != -1) res.push(data[index]);
-  return res;
+  let find = data.filter(resto => resto.nom.toLowerCase() === sentence.toLowerCase()  || resto.nom.toLowerCase().includes(sentence.toLowerCase()));
+  return find;
 };
 
 // ======= EXPORTS =======

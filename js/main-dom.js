@@ -66,10 +66,15 @@ section.insertAdjacentHTML("beforeend",
  })
  
 }
-
-// stars, delivery buttons, regimes to uppercase, why other cards has no sliced description?
+// search bar on select - clears the content
 // if not website - cacher l'icone
 // trim url to its domain name
+// add organisation filtre
+// display top 10
+// carousel
+// resto page
+// recommendations
+// plan de la ville
 
 export {
   displayRestaurants

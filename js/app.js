@@ -24,18 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const restaurantTop10 = getTop10(restaurants); // restaurant Top 10
   const top10Length = getTop10(restaurants).length; // nb of restaurants
 
-  // CUT TEXT
-  let top10description = document.querySelector('.top10-description p');
-  let cardDescriptions = document.querySelectorAll('.resto-card-description p');
-  // put in main dom file? slice dynamicaly by its id?
-  const slicedTextTop10 = top10description.textContent.slice(0, top10description.textContent.indexOf(' ', 600));
-  top10description.innerHTML = `${slicedTextTop10} <span>[...]</span>`;
-  
-  cardDescriptions.forEach(card => {
-    const slicedTextRestoCard = card.textContent.slice(0, card.textContent.indexOf(' ', 260));
-    card.innerHTML = `${slicedTextRestoCard} ${slicedTextRestoCard.trim().length !== 0 ? '<span>[...]</span>':''}`;
-  })
-  
+ 
 
   
   // FILTER FACTORY
@@ -138,7 +127,7 @@ const searchBar = document.querySelector("#search-field");
 searchBar.addEventListener("change", (e) => {
   let res = searchByName(restaurants, e.currentTarget.value);
   if (res.length > 0) {
-    console.log(res);
+    displayRestaurants(res);
   } else {
     console.log("Pas de restaurant avec ce nom!");
   }

@@ -15,4 +15,6 @@ const splitAndJoin = (sentence) => {
   return res;
 };
 
-
+const displayStars = (rating, fullStar, emptyStar) => {
+  return fullStar.repeat(rating)+emptyStar.repeat(5-rating);
+};

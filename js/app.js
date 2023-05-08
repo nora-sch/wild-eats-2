@@ -28,8 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
   top10description.innerHTML = `${slicedTextTop10} <span>[...]</span>`;
   
   cardDescriptions.forEach(card => {
-    const slicedTextRestoCard = card.textContent.slice(0, card.textContent.indexOf(' ', 280));
-    console.log(card.textContent.length);
+    const slicedTextRestoCard = card.textContent.slice(0, card.textContent.indexOf(' ', 260));
     card.innerHTML = `${slicedTextRestoCard} ${slicedTextRestoCard.trim().length !== 0 ? '<span>[...]</span>':''}`;
   })
   

@@ -173,6 +173,7 @@ section {
   margin-bottom: 4px;
   margin-left: 4px;
   font-size: 12px;
+  font-weight: 500;
 }
 
 .take-away {
@@ -209,7 +210,7 @@ section {
 }
 .resto-card-info {
   /* flex-grow: 9; */
-  padding: 5px 0px;
+  padding: 0px;
   width: 760px;
   display: flex;
   flex-direction: column;
@@ -250,7 +251,7 @@ section {
 }
 .resto-card-description {
   font-size: 16px;
-  width: 100%;
+  width:470px;
   height: 150px;
   text-align: justify;
 }
@@ -262,6 +263,7 @@ section {
 }
 
 .resto-card-contacts {
+  width:270px;
   font-size: 14px;
   display: grid;
   margin: 20px 0px 0px 20px;

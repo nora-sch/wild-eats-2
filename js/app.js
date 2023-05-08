@@ -22,13 +22,18 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // CUT TEXT
   let top10description = document.querySelector('.top10-description p');
-
-  let cardDescription = document.querySelector('.resto-card-description p');
-
+  let cardDescriptions = document.querySelectorAll('.resto-card-description p');
+  // put in main dom file? slice dynamicaly by its id?
   const slicedTextTop10 = top10description.textContent.slice(0, top10description.textContent.indexOf(' ', 600));
   top10description.innerHTML = `${slicedTextTop10} <span>[...]</span>`;
-  const slicedTextRestoCard = cardDescription.textContent.slice(0, cardDescription.textContent.indexOf(' ', 380));
-  cardDescription.innerHTML = `${slicedTextRestoCard} <span>[...]</span>`;
+  
+  cardDescriptions.forEach(card => {
+    const slicedTextRestoCard = card.textContent.slice(0, card.textContent.indexOf(' ', 280));
+    console.log(card.textContent.length);
+    card.innerHTML = `${slicedTextRestoCard} ${slicedTextRestoCard.trim().length !== 0 ? '<span>[...]</span>':''}`;
+  })
+  
+
   
   // FILTER FACTORY
 
@@ -49,6 +54,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   filterForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    console.log("submitted");
 
     // SORT
     let sort = document.getElementsByName("sortBy");

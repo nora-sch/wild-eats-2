@@ -123,12 +123,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // SEARCHBAR
 const searchBar = document.querySelector("#search-field");
-
+searchBar.addEventListener("click", (e) =>{
+  searchBar.value = '';
+});
 searchBar.addEventListener("change", (e) => {
   let res = searchByName(restaurants, e.currentTarget.value);
-  if (res.length > 0) {
-    displayRestaurants(res);
-  } else {
-    console.log("Pas de restaurant avec ce nom!");
-  }
+  displayRestaurants(res);
+  // if (res.length > 0) {
+  //   displayRestaurants(res);
+  // } else {
+  //   console.log("Pas de restaurant avec ce nom!");
+  // }
 });

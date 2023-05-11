@@ -10,13 +10,17 @@ import {
   searchByName,
 } from "./filters.js";
 import{
-  displayRestaurants
+  displayRestaurants,
+  displayTop10
 } from "./main-dom.js"
 
 window.addEventListener("DOMContentLoaded", () => {
   let dataToDisplay = restaurants;
   console.log(dataToDisplay);
   displayRestaurants(restaurants);
+  const top10 = getTop10(restaurants);
+  console.log(top10);
+  displayTop10(top10);
 
   const allFiltersToDisplay = getAllFiltersToDisplay(restaurants);
   console.log(allFiltersToDisplay);
